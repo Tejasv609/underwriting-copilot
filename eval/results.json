@@ -1,0 +1,234 @@
+{
+  "metrics": {
+    "n_applications": 10,
+    "decision_agreement": 1.0,
+    "citation_rate": 1.0,
+    "policy_hit_rate": 1.0,
+    "clarify_trigger_rate": 0.1,
+    "keyword_coverage": 1.0
+  },
+  "per_application": [
+    {
+      "application_id": "APP-001",
+      "expected": "approve",
+      "actual": "approve",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "APPROVED",
+        "11.00%"
+      ],
+      "keywords_hit": [
+        "APPROVED",
+        "11.00%"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-002",
+      "expected": "refer",
+      "actual": "refer",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "grey",
+        "FOIR"
+      ],
+      "keywords_hit": [
+        "grey",
+        "FOIR"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-003",
+      "expected": "decline",
+      "actual": "decline",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "CIBIL",
+        "650"
+      ],
+      "keywords_hit": [
+        "CIBIL",
+        "650"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-004",
+      "expected": "decline",
+      "actual": "decline",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "FOIR",
+        "0.55"
+      ],
+      "keywords_hit": [
+        "FOIR",
+        "0.55"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-005",
+      "expected": "decline",
+      "actual": "decline",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "DPD",
+        "delinquency"
+      ],
+      "keywords_hit": [
+        "DPD",
+        "delinquency"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-006",
+      "expected": "clarify",
+      "actual": "clarify",
+      "agree": true,
+      "citations": 0,
+      "policy_docs_cited": [],
+      "keywords_expected": [
+        "income"
+      ],
+      "keywords_hit": [
+        "income"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-007",
+      "expected": "approve",
+      "actual": "approve",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "APPROVED",
+        "8.50%"
+      ],
+      "keywords_hit": [
+        "APPROVED",
+        "8.50%"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-008",
+      "expected": "refer",
+      "actual": "refer",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "vintage",
+        "medium"
+      ],
+      "keywords_hit": [
+        "vintage",
+        "medium"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-009",
+      "expected": "decline",
+      "actual": "decline",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "LTV",
+        "0.90"
+      ],
+      "keywords_hit": [
+        "LTV",
+        "0.90"
+      ],
+      "keywords_ok": true
+    },
+    {
+      "application_id": "APP-010",
+      "expected": "refer",
+      "actual": "refer",
+      "agree": true,
+      "citations": 8,
+      "policy_docs_cited": [
+        "01_eligibility.md",
+        "02_credit_policy.md",
+        "03_pricing.md",
+        "04_documentation.md",
+        "05_exceptions.md"
+      ],
+      "keywords_expected": [
+        "documentation",
+        "disbursal"
+      ],
+      "keywords_hit": [
+        "documentation",
+        "disbursal"
+      ],
+      "keywords_ok": true
+    }
+  ]
+}
