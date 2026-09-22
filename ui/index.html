@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Underwriting Copilot</title>
+<link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+<header>
+  <h1>Underwriting Copilot</h1>
+  <p class="sub">Agentic loan-underwriting assistant · synthetic demo data only</p>
+</header>
+
+<main>
+  <section class="card">
+    <h2>Loan application</h2>
+    <form id="app-form">
+      <div class="grid">
+        <label>Application ID <input name="application_id" value="APP-101"></label>
+        <label>Applicant name <input name="applicant_name" value="Test Applicant"></label>
+        <label>Product
+          <select name="product">
+            <option value="personal_loan">Personal Loan</option>
+            <option value="home_loan">Home Loan</option>
+            <option value="auto_loan">Auto Loan</option>
+            <option value="business_loan">Business Loan</option>
+          </select>
+        </label>
+        <label>Loan amount (INR) <input name="loan_amount" type="number" value="500000"></label>
+        <label>Tenure (months) <input name="loan_tenure_months" type="number" value="36"></label>
+        <label>Monthly income (INR) <input name="monthly_income" type="number" value="120000"></label>
+        <label>Existing obligations (INR/mo) <input name="existing_monthly_obligations" type="number" value="8000"></label>
+        <label>Employment vintage (months) <input name="employment_vintage_months" type="number" value="54"></label>
+        <label>CIBIL score <input name="cibil_score" type="number" value="782" min="300" max="900"></label>
+        <label>Collateral value (INR, secured only) <input name="collateral_value" type="number" placeholder="optional"></label>
+        <label>Worst DPD (24m) <input name="worst_dpd_24m" type="number" value="0"></label>
+      </div>
+      <label class="check"><input type="checkbox" name="has_coapplicant"> Co-applicant with own income</label>
+      <fieldset>
+        <legend>Documents provided</legend>
+        <div class="docs" id="docs">
+          <label class="check"><input type="checkbox" value="identity_proof" checked> Identity proof</label>
+          <label class="check"><input type="checkbox" value="address_proof" checked> Address proof</label>
+          <label class="check"><input type="checkbox" value="income_proof" checked> Income proof</label>
+          <label class="check"><input type="checkbox" value="bank_statements_6m" checked> Bank statements (6m)</label>
+          <label class="check"><input type="checkbox" value="employment_proof" checked> Employment proof</label>
+          <label class="check"><input type="checkbox" value="collateral_valuation"> Collateral valuation</label>
+          <label class="check"><input type="checkbox" value="ownership_documents"> Ownership documents</label>
+        </div>
+      </fieldset>
+      <button type="submit">Run underwriting</button>
+    </form>
+  </section>
+
+  <section class="card" id="result-card" hidden>
+    <h2>Decision memo</h2>
+    <div id="decision-badge"></div>
+    <div id="numbers"></div>
+    <h3>Execution trace</h3>
+    <ol id="trace" class="trace"></ol>
+    <h3>Reasons</h3>
+    <ul id="reasons"></ul>
+    <h3>Conditions</h3>
+    <ul id="conditions"></ul>
+    <h3>Policy citations</h3>
+    <div id="citations"></div>
+    <h3>Memo</h3>
+    <pre id="memo"></pre>
+  </section>
+
+  <section class="card">
+    <h2>Chat — guided application</h2>
+    <p class="hint">Start with partial details; the agent asks for what's missing and continues when you answer.</p>
+    <div id="chat-log" class="chat-log"></div>
+    <form id="chat-form" class="chat-form">
+      <input id="chat-input" placeholder='e.g. {"product":"personal_loan","loan_amount":500000} or monthly_income: 85000' autocomplete="off">
+      <button type="submit">Send</button>
+    </form>
+  </section>
+</main>
+
+<script src="/static/app.js"></script>
+</body>
+</html>
